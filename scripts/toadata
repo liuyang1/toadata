@@ -3,6 +3,12 @@
 file="$1"
 quiet=""
 
+usage() {
+    prog=$(basename "$0")
+    echo "$prog [media filename]"
+    exit -1
+}
+
 msg() {
     if [[ "$quiet" != "yes" ]]; then
         echo "$@"
@@ -16,10 +22,13 @@ genePreview(){
 
 geneMarkdown(){
     msg gene markdown from mediainfo
-    python mdtoadata.py "$file"
+    mdtoadata "$file"
 }
 
 main() {
+    if [[ "$file" == "" ]]; then
+        usage
+    fi
     genePreview
     geneMarkdown
 }

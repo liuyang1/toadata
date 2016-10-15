@@ -21,3 +21,4 @@ I just want to check information of video. So write this tool.
         - [x] support comment section, (comment section won't affect when update)
     - [ ] json (key-value format for search)
 - [ ] daemon to check new added video file
+- [x] install

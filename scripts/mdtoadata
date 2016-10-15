@@ -1,6 +1,6 @@
 #! /usr/bin/env python2
 
-import hub
+import toadata.hub as hub
 import os
 import subprocess
 
@@ -31,8 +31,15 @@ def toadatamd(fn):
     r = hub.outputMarkdown(cnt)
     return r
 
+
+def usage(n):
+    print >> sys.stderr, "%s [media filename]" % (n)
+
 if __name__ == "__main__":
     import sys
+    if len(sys.argv) < 2:
+        usage(sys.argv[0])
+        exit()
     fn = sys.argv[1]
     r = toadatamd(fn)
     open(fn + ".md", "w").write(r)
