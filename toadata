@@ -1,0 +1,27 @@
+#! /usr/bin/env bash
+
+file="$1"
+quiet=""
+
+msg() {
+    if [[ "$quiet" != "yes" ]]; then
+        echo "$@"
+    fi
+}
+
+genePreview(){
+    msg gene preview image
+    ffmpeg -ss 00:00:01 -i "$file" -r 1 -vframes 1 -an -f mjpeg -y "$file.jpg" 2>/dev/null
+}
+
+geneMarkdown(){
+    msg gene markdown from mediainfo
+    python mdtoadata.py "$file"
+}
+
+main() {
+    genePreview
+    geneMarkdown
+}
+
+main
