@@ -16,12 +16,12 @@ msg() {
 }
 
 genePreview(){
-    msg gene preview image
+    msg "preview   $file"
     ffmpeg -ss 00:00:01 -i "$file" -r 1 -vframes 1 -an -f mjpeg -y "$file.jpg" 2>/dev/null
 }
 
 geneMarkdown(){
-    msg gene markdown from mediainfo
+    msg "mediainfo $file"
     mdtoadata "$file"
 }
 

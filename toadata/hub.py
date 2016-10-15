@@ -1,5 +1,4 @@
 import StringIO
-import sys
 
 
 def loadMediaInfoLine(s):
@@ -11,7 +10,7 @@ def loadMediaInfoLine(s):
 
 def loadMediaInfo(s):
     c = s.split('\n')
-    cnt = []
+    cnt, key, chk = [], None, None
     for l in c:
         if "" == l:
             if key and chk:
@@ -61,9 +60,9 @@ def outputMarkdown(lst, level=0):
     for k, v in lst:
         o.write("#" * level)
         o.write("# %s\n" % k)
-        if type(v) is str:
+        if isinstance(v, str):
             o.write("%s\n" % (v))
-        elif type(v) is list:
+        elif isinstance(v, list):
             o.write("\n%s\n" % outputMakrdownLst(v))
     r = o.getvalue()
     o.close()

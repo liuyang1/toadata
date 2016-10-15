@@ -1,6 +1,8 @@
-# toadata
+# toadata :frog: :eyeglasses:
 
 Index various media meta-data
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/fec14c25e255475b8023f5f8e3818d2d)](https://www.codacy.com/app/lujing-zui/toadata?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=liuyang1/toadata&amp;utm_campaign=Badge_Grade)
 
 ## Why need this tools?
 
