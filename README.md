@@ -24,9 +24,23 @@ sudo python setup.py install
         - [ ] show streams
         - [ ] show frames
         - [x] capture sample picture for video
+        - [ ] visualize frame size
+        - [ ] visualize frame pts
 - [ ] output format
     - [x] markdown (for review)
         - [x] support comment section, (comment section won't affect when update)
     - [ ] json (key-value format for search)
 - [ ] daemon to check new added video file
 - [x] install
+
+## Dependency
+
+Toadata depend on tons of external program, at this is for it's purpose.
+
+| class      | dependency      | comment                |
+|------------|-----------------|------------------------|
+| video tool | mediainfo       | basic info             |
+|            | ffmpeg(ffprobe) | show streams, frames.. |
+| script     | python          |                        |
+|            | bash            |                        |
+| python lib | matplotlib      | plot image             |
