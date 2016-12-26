@@ -10,6 +10,12 @@ We have plenty of video format, and so many tools to check them. I am tired to u
 
 I just want to check information of video. So write this tool.
 
+## How to install
+
+```
+sudo python setup.py install
+```
+
 ## Target
 
 - [ ] collect result from many tools
